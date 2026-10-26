@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Bun Chew Café | Signature Korean Buns & Specialty Coffee</title>
+  <meta name="description" content="Taste beyond borders at Bun Chew Café. Indulge in warm signature Korean garlic cheese buns, handcrafted beverages, and specialty coffee. Good coffee, better days.">
+  <link rel="icon" type="image/png" href="assets/bun-chew-logo-hd.png">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header / Navigation Bar -->
+  <header class="site-header" id="header">
+    <div class="header-container">
+      <!-- Brand Logo (Left) -->
+      <a href="#" class="brand-logo" aria-label="Bun Chew Home">
+        <img src="assets/bun-chew-logo-hd.png" alt="Bun Chew Café Logo" class="logo-img">
+      </a>
+
+      <!-- Desktop Navigation Links (Centered) -->
+      <!-- Note: Top-right Order Now and Find a Store buttons removed completely per user instructions -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
+          <li class="nav-item"><a href="#locations" class="nav-link">Locations</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Hamburger Button (Right) -->
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobileDrawer" aria-hidden="true">
+      <div class="drawer-header">
+        <img src="assets/bun-chew-logo-hd.png" alt="Bun Chew Café Logo" class="drawer-logo">
+        <button class="close-drawer-btn" id="closeDrawerBtn" aria-label="Close menu">&times;</button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="menu.html" class="mobile-nav-link">Menu</a></li>
+        <li><a href="#locations" class="mobile-nav-link">Locations</a></li>
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+    </div>
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  </header>
+
+  <!-- Main Hero Section -->
+  <main>
+    <section class="hero-section" id="hero">
+      <!-- Mobile Hero Visual: Top cropped photo with arched bottom mask (<= 768px) -->
+      <div class="hero-mobile-visual" aria-hidden="true">
+        <div class="mobile-image-wrapper">
+          <img src="assets/hero-bg.png" alt="Bun Chew guest enjoying signature garlic bun and coffee" class="mobile-hero-img">
+          <!-- Upward arched curve mask with matching doodle pattern -->
+          <div class="mobile-curve-mask">
+            <svg viewBox="0 0 500 36" preserveAspectRatio="none" class="curve-svg" style="display: block;">
+              <defs>
+                <pattern id="curveDoodlePattern" patternUnits="userSpaceOnUse" width="380" height="380">
+                  <rect width="380" height="380" fill="#FAF7F2"/>
+                  <image href="assets/doodle-pattern.png" xlink:href="assets/doodle-pattern.png" width="380" height="380" opacity="0.13"/>
+                </pattern>
+              </defs>
+              <path d="M0,0 C160,34 340,34 500,0 L500,40 L0,40 Z" fill="url(#curveDoodlePattern)"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Main Container -->
+      <div class="hero-container">
+        <!-- Floating Supporting Tagline Doodle (Desktop only: between wall logo & guest) -->
+        <div class="tagline-doodle" aria-label="Good coffee, better days">
+          <div class="doodle-sparks-left">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M5 12H1M7 5L4 2M7 19L4 22" stroke="#A61B22" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="tagline-text-wrap">
+            <span class="tagline-line-1">Good coffee,</span>
+            <span class="tagline-line-2">better days</span>
+          </div>
+          <div class="doodle-sparks-right">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M19 12H23M17 5L20 2M17 19L20 22" stroke="#A61B22" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Hero Content (Positioned cleanly under the painted wall logo) -->
+        <div class="hero-content">
+          <!-- Main Headline with handwritten script & playful accents -->
+          <div class="headline-wrapper">
+            <!-- 3 clean red hand-drawn strokes in a neat radial fan above Taste -->
+            <div class="headline-accents-top" aria-hidden="true">
+              <svg width="38" height="32" viewBox="0 0 38 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 16C8 19 11.5 22.5 15 26" stroke="#A61B22" stroke-width="3.6" stroke-linecap="round"/>
+                <path d="M16 7C18 12 20.5 18 23 23" stroke="#A61B22" stroke-width="3.6" stroke-linecap="round"/>
+                <path d="M29 5C29.5 10.5 30 16 30.5 22" stroke="#A61B22" stroke-width="3.6" stroke-linecap="round"/>
+              </svg>
+            </div>
+
+            <h1 class="hero-headline">
+              <span class="word-taste">Taste</span>
+              <span class="word-beyond">beyond</span>
+              <span class="word-borders">Borders</span>
+            </h1>
+
+            <!-- 2 short parallel red strokes, slightly angled, beside Borders -->
+            <div class="headline-accents-bottom" aria-hidden="true">
+              <svg width="30" height="22" viewBox="0 0 30 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 8.5C9 7 16 5.5 23 4" stroke="#A61B22" stroke-width="3.6" stroke-linecap="round"/>
+                <path d="M7 18.5C13 17 20 15.5 27 14" stroke="#A61B22" stroke-width="3.6" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Supporting Description -->
+          <p class="hero-description">
+            Signature Korean Buns, rich flavours and great coffee — all in one place.
+          </p>
+
+          <!-- Call to Action Buttons -->
+          <div class="hero-actions">
+            <a href="menu.html" class="btn btn-primary" id="exploreMenuBtn">
+              <span>Explore Menu</span>
+              <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#locations" class="btn btn-secondary" id="findStoreBtn">
+              <span>Find a Store</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Unified Flow with Seamless Continuous Doodle Pattern (Zero Gaps) -->
+    <div class="sections-pattern-flow">
+      <!-- Our Menu Section -->
+      <section class="menu-section" id="menu">
+      <div class="menu-container">
+        <!-- Section Header Row -->
+        <div class="menu-header">
+          <div class="menu-header-text">
+            <span class="menu-eyebrow">OUR MENU</span>
+            <h2 class="menu-title">
+              <span class="title-buns">Delicious Buns,</span>
+              <span class="title-coffee">Coffee</span>
+              <span class="title-more">and More</span>
+            </h2>
+          </div>
+          <!-- Single All Menu button connected to the dedicated All Menu page -->
+          <div class="menu-header-action">
+            <a href="menu.html" class="btn btn-all-menu" id="allMenuBtn">
+              <span>All Menu</span>
+              <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Menu Cards Grid -->
+        <div class="menu-grid">
+          <!-- Card 1: Signature Korean Bun -->
+          <article class="menu-card" data-category="buns">
+            <div class="card-image-box">
+              <img src="assets/menu-garlic-bun.png" alt="Signature Glazed Korean Garlic Cheese Bun" class="card-img" loading="lazy">
+            </div>
+            <div class="card-info">
+              <h3 class="card-title">Signature<br>Korean Bun</h3>
+              <a href="#menu" class="card-action-btn" aria-label="View details for Signature Korean Bun">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 2: Crispy Cream Bun -->
+          <article class="menu-card" data-category="buns">
+            <div class="card-image-box">
+              <img src="assets/menu-crispy-bun.png" alt="Crispy Bun Chew Cream Bun" class="card-img" loading="lazy">
+            </div>
+            <div class="card-info">
+              <h3 class="card-title">Crispy<br>Cream Bun</h3>
+              <a href="#menu" class="card-action-btn" aria-label="View details for Crispy Cream Bun">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 3: Pistachio Cream Bun -->
+          <article class="menu-card" data-category="buns">
+            <div class="card-image-box">
+              <img src="assets/menu-pistachio-bun.png" alt="Pistachio Cream Bun in Branded Wrap" class="card-img" loading="lazy">
+            </div>
+            <div class="card-info">
+              <h3 class="card-title">Pistachio<br>Cream Bun</h3>
+              <a href="#menu" class="card-action-btn" aria-label="View details for Pistachio Cream Bun">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 4: Iced Coffee Delight -->
+          <article class="menu-card" data-category="drinks">
+            <div class="card-image-box card-image-drink">
+              <img src="assets/menu-iced-coffee.png" alt="Bun Chew Iced Coffee Delight" class="card-img" loading="lazy">
+            </div>
+            <div class="card-info">
+              <h3 class="card-title">Iced Coffee<br>Delight</h3>
+              <a href="#menu" class="card-action-btn" aria-label="View details for Iced Coffee Delight">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="story-section" id="about">
+      <div class="story-container">
+        <!-- Story Image Column (Left) -->
+        <div class="story-image-wrap">
+          <img src="assets/Bun Chew Café at Golden Hour.png" alt="Bun Chew Café interior at golden hour" class="story-img" loading="lazy">
+        </div>
+
+        <!-- Story Content Column (Right) -->
+        <div class="story-content">
+          <span class="story-eyebrow">OUR STORY</span>
+          <div class="story-headline-wrap">
+            <h2 class="story-headline">
+              <span class="story-word-chew">Chew</span>
+              <span class="story-word-flavor">into Flavor</span>
+            </h2>
+            <div class="story-doodle-rays" aria-hidden="true">
+              <svg width="34" height="28" viewBox="0 0 34 28" fill="none">
+                <path d="M4 22L12 8" stroke="#E5A93C" stroke-width="3" stroke-linecap="round"/>
+                <path d="M17 20L19 3" stroke="#E5A93C" stroke-width="3" stroke-linecap="round"/>
+                <path d="M30 18L23 7" stroke="#E5A93C" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+          <p class="story-description">
+            At Bun Chew, we bring bold Korean flavours and comforting café moments together. From our signature garlic cheese buns to our carefully brewed coffee, everything is made to fuel your everyday adventures.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Locations Section -->
+    <section class="locations-section" id="locations">
+      <div class="locations-container">
+        <!-- Section Header -->
+        <div class="locations-header">
+          <span class="locations-eyebrow">LOCATIONS</span>
+          <h2 class="locations-title">Visit Our Store</h2>
+        </div>
+
+        <!-- Single Store Location Card -->
+        <div class="location-single-card-wrap">
+          <article class="location-card" id="kochiStoreCard">
+            <!-- Store Image (Clickable to open Google Maps) -->
+            <a href="https://maps.app.goo.gl/UzxFyjBt8iA91zGC8" target="_blank" rel="noopener noreferrer" class="location-image-link" aria-label="Open Bun Chew Café Kochi location on Google Maps">
+              <div class="location-image-box">
+                <img src="assets/Bun Chew’s Warm Pastry Counter.png" alt="Bun Chew Café pastry counter and storefront in Kochi" class="location-img" loading="lazy">
+                <div class="location-image-overlay">
+                  <span class="location-overlay-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+                    </svg>
+                    Open in Maps
+                  </span>
+                </div>
+              </div>
+            </a>
+
+            <!-- Location Details Footer -->
+            <div class="location-info">
+              <div class="location-text-group">
+                <div class="location-pin-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="#A61B22">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                  </svg>
+                </div>
+                <div class="location-text-body">
+                  <h3 class="location-city">Kochi</h3>
+                  <a href="https://maps.app.goo.gl/UzxFyjBt8iA91zGC8" target="_blank" rel="noopener noreferrer" class="location-address-link">
+                    Padivattom, Pipeline Road, Kochi
+                  </a>
+                  <span class="location-timing">Open Daily: 2 PM – 2 AM</span>
+                </div>
+              </div>
+
+              <!-- Direction Action Button -->
+              <a href="https://maps.app.goo.gl/UzxFyjBt8iA91zGC8" target="_blank" rel="noopener noreferrer" class="btn btn-directions" id="getDirectionsBtn" aria-label="Get directions to Bun Chew Kochi on Google Maps">
+                <span>Get Directions</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    </div>
+  </main>
+
+  <!-- Unified Red Footer Component -->
+  <footer class="red-site-footer" id="contact">
+    <div class="red-footer-container">
+      <div class="red-footer-card">
+        <!-- Banner Row: Cropped Bun, Headline, Logo Badge -->
+        <div class="red-footer-banner-row">
+          <!-- Bun Product Box: Intentionally Cropped Close-Up -->
+          <div class="red-footer-bun-frame">
+            <img src="assets/menu-garlic-bun.png" alt="Freshly baked signature Bun Chew Korean garlic cheese bun close-up" class="red-footer-bun-img" loading="lazy">
+          </div>
+
+          <!-- Headline -->
+          <div class="red-footer-headline-box">
+            <div class="red-footer-text-inner">
+              <span class="red-footer-line-1">Freshly Baked,</span>
+              <div class="red-footer-line-2-row">
+                <span class="red-footer-line-2">Happier Days</span>
+                <div class="red-footer-doodle-rays" aria-hidden="true">
+                  <svg width="34" height="28" viewBox="0 0 34 28" fill="none">
+                    <path d="M4 22L12 8" stroke="#FFD15C" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M17 20L19 3" stroke="#FFD15C" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M30 18L23 7" stroke="#FFD15C" stroke-width="3" stroke-linecap="round"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Logo Badge -->
+          <div class="red-footer-logo-box">
+            <div class="red-footer-logo-badge">
+              <img src="assets/bun-chew-logo-hd.png" alt="Bun Chew Café Logo" class="red-footer-logo-img">
+            </div>
+          </div>
+        </div>
+
+        <!-- Thin Subtle Divider -->
+        <hr class="red-footer-divider" aria-hidden="true">
+
+        <!-- Essential Contact Details Row -->
+        <div class="red-footer-contact-row">
+          <!-- Location Group -->
+          <div class="red-footer-info-group">
+            <div class="red-footer-info-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div class="red-footer-info-body">
+              <span class="red-footer-info-label">Location</span>
+              <a href="https://maps.app.goo.gl/UzxFyjBt8iA91zGC8" target="_blank" rel="noopener noreferrer" class="red-footer-info-link" aria-label="Open location on Google Maps">
+                Pipeline Rd, Padivattom, Edappally, Ernakulam, Kerala 682024
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact Phone Group -->
+          <div class="red-footer-info-group">
+            <div class="red-footer-info-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <div class="red-footer-info-body">
+              <span class="red-footer-info-label">Contact</span>
+              <a href="tel:+919539700143" class="red-footer-info-link red-footer-phone-val">
+                +91 9539700143
+              </a>
+            </div>
+          </div>
+
+          <!-- Instagram Group -->
+          <div class="red-footer-info-group">
+            <div class="red-footer-info-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </div>
+            <div class="red-footer-info-body">
+              <span class="red-footer-info-label">Instagram</span>
+              <a href="https://www.instagram.com/bun_chew/" target="_blank" rel="noopener noreferrer" class="red-footer-info-link red-footer-insta-val" aria-label="Follow Bun Chew on Instagram">
+                @bun_chew
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Developer Credit Strip (Thin Full-Width Black Strip) -->
+  <div class="developer-credit-strip">
+    <p class="developer-credit-text">&copy; 2026 CAD CodeAndDesigns. All rights reserved.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

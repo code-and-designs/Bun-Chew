@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Our Full Menu | Bun Chew Café</title>
+  <meta name="description" content="Explore our full menu at Bun Chew Café. From freshly baked signature Korean garlic buns to hot & iced coffees, bubble smoothies, shakes, and burgers.">
+  <link rel="icon" type="image/png" href="assets/bun-chew-logo-hd.png">
+
+  <!-- Core and Dedicated Page Styles -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+  <!-- Header / Navigation Bar -->
+  <header class="site-header" id="header">
+    <div class="header-container">
+      <!-- Brand Logo (Left) -->
+      <a href="index.html" class="brand-logo" aria-label="Bun Chew Home">
+        <img src="assets/bun-chew-logo-hd.png" alt="Bun Chew Café Logo" class="logo-img">
+      </a>
+
+      <!-- Desktop Navigation Links (Centered) -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="menu.html" class="nav-link active">Menu</a></li>
+          <li class="nav-item"><a href="index.html#locations" class="nav-link">Locations</a></li>
+          <li class="nav-item"><a href="index.html#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Hamburger Button (Right) -->
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobileDrawer" aria-hidden="true">
+      <div class="drawer-header">
+        <img src="assets/bun-chew-logo-hd.png" alt="Bun Chew Café Logo" class="drawer-logo">
+        <button class="close-drawer-btn" id="closeDrawerBtn" aria-label="Close menu">&times;</button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="menu.html" class="mobile-nav-link active">Menu</a></li>
+        <li><a href="index.html#locations" class="mobile-nav-link">Locations</a></li>
+        <li><a href="index.html#about" class="mobile-nav-link">About</a></li>
+        <li><a href="index.html#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+    </div>
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  </header>
+
+  <!-- Main Content: Full Menu Catalog -->
+  <main class="full-menu-wrapper">
+    <div class="full-menu-container">
+      <!-- Breadcrumb / Back Link -->
+      <div class="menu-nav-top">
+        <a href="index.html" class="back-home-link" aria-label="Return to homepage">
+          <svg class="back-arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          <span>Back to Home</span>
+        </a>
+        <span class="menu-brand-pill">Taste Beyond Borders</span>
+      </div>
+
+      <!-- Category Filter Chips (No search, no white box) -->
+      <div class="menu-categories-wrap">
+        <nav class="category-nav-bar" aria-label="Menu categories">
+          <button type="button" class="category-tab active" data-category="all" role="tab" aria-selected="true">All</button>
+          <button type="button" class="category-tab" data-category="buns" role="tab" aria-selected="false">Buns</button>
+          <button type="button" class="category-tab" data-category="hot-beverages" role="tab" aria-selected="false">Hot Beverages</button>
+          <button type="button" class="category-tab" data-category="cold-beverages" role="tab" aria-selected="false">Cold Beverages</button>
+          <button type="button" class="category-tab" data-category="bubble-smoothie" role="tab" aria-selected="false">Bubble Smoothie</button>
+          <button type="button" class="category-tab" data-category="shakes" role="tab" aria-selected="false">Shakes</button>
+          <button type="button" class="category-tab" data-category="burgers" role="tab" aria-selected="false">Burgers</button>
+          <button type="button" class="category-tab" data-category="bun-chew-signature" role="tab" aria-selected="false">Bun Chew Signature</button>
+          <button type="button" class="category-tab" data-category="french-fries" role="tab" aria-selected="false">French Fries</button>
+        </nav>
+      </div>
+
+      <!-- Menu Status Bar -->
+      <div class="menu-status-bar">
+        <span class="menu-item-count" id="menuItemCount">Loading items...</span>
+      </div>
+
+      <!-- Menu Cards Grid -->
+      <div class="all-menu-grid" id="menuCardsGrid" role="region" aria-live="polite">
+        <!-- Rendered dynamically by menu.js from menu-data.js -->
+      </div>
+
+      <!-- Empty State -->
+      <div class="menu-empty-state" id="menuEmptyState" style="display: none;">
+        <div class="empty-icon" aria-hidden="true">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            <line x1="8" y1="11" x2="14" y2="11"></line>
+          </svg>
+        </div>
+        <h2 class="empty-title">No menu items found</h2>
+        <p class="empty-subtitle">We couldn't find anything matching <span id="emptyQueryText">your query</span>.</p>
+        <button type="button" class="btn-reset-filters" id="resetFiltersBtn">
+          <span>Show All Menu Items</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Item Description Popup Modal -->
+    <div class="menu-modal-backdrop" id="menuItemModal" aria-hidden="true">
+      <div class="menu-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalItemTitle">
+        <button type="button" class="menu-modal-close" id="closeItemModalBtn" aria-label="Close details">&times;</button>
+        <div class="menu-modal-media">
+          <img src="" alt="" id="modalItemImg" class="menu-modal-img">
+        </div>
+        <div class="menu-modal-body">
+          <span class="menu-modal-cat" id="modalItemCategory"></span>
+          <h3 class="menu-modal-title" id="modalItemTitle"></h3>
+          <div class="menu-modal-price-tag" id="modalItemPrice"></div>
+          <p class="menu-modal-desc" id="modalItemDesc"></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Unified Red Footer Component -->
+  <footer class="red-site-footer" id="contact">
+    <div class="red-footer-container">
+      <div class="red-footer-card">
+        <!-- Banner Row: Cropped Bun, Headline, Logo Badge -->
+        <div class="red-footer-banner-row">
+          <!-- Bun Product Box: Intentionally Cropped Close-Up -->
+          <div class="red-footer-bun-frame">
+            <img src="assets/menu-garlic-bun.png" alt="Freshly baked signature Bun Chew Korean garlic cheese bun close-up" class="red-footer-bun-img" loading="lazy">
+          </div>
+
+          <!-- Headline -->
+          <div class="red-footer-headline-box">
+            <div class="red-footer-text-inner">
+              <span class="red-footer-line-1">Freshly Baked,</span>
+              <div class="red-footer-line-2-row">
+                <span class="red-footer-line-2">Happier Days</span>
+                <div class="red-footer-doodle-rays" aria-hidden="true">
+                  <svg width="34" height="28" viewBox="0 0 34 28" fill="none">
+                    <path d="M4 22L12 8" stroke="#FFD15C" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M17 20L19 3" stroke="#FFD15C" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M30 18L23 7" stroke="#FFD15C" stroke-width="3" stroke-linecap="round"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Logo Badge -->
+          <div class="red-footer-logo-box">
+            <div class="red-footer-logo-badge">
+              <img src="assets/bun-chew-logo-hd.png" alt="Bun Chew Café Logo" class="red-footer-logo-img">
+            </div>
+          </div>
+        </div>
+
+        <!-- Thin Subtle Divider -->
+        <hr class="red-footer-divider" aria-hidden="true">
+
+        <!-- Essential Contact Details Row -->
+        <div class="red-footer-contact-row">
+          <!-- Location Group -->
+          <div class="red-footer-info-group">
+            <div class="red-footer-info-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div class="red-footer-info-body">
+              <span class="red-footer-info-label">Location</span>
+              <a href="https://maps.app.goo.gl/UzxFyjBt8iA91zGC8" target="_blank" rel="noopener noreferrer" class="red-footer-info-link" aria-label="Open location on Google Maps">
+                Pipeline Rd, Padivattom, Edappally, Ernakulam, Kerala 682024
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact Phone Group -->
+          <div class="red-footer-info-group">
+            <div class="red-footer-info-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <div class="red-footer-info-body">
+              <span class="red-footer-info-label">Contact</span>
+              <a href="tel:+919539700143" class="red-footer-info-link red-footer-phone-val">
+                +91 9539700143
+              </a>
+            </div>
+          </div>
+
+          <!-- Instagram Group -->
+          <div class="red-footer-info-group">
+            <div class="red-footer-info-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </div>
+            <div class="red-footer-info-body">
+              <span class="red-footer-info-label">Instagram</span>
+              <a href="https://www.instagram.com/bun_chew/" target="_blank" rel="noopener noreferrer" class="red-footer-info-link red-footer-insta-val" aria-label="Follow Bun Chew on Instagram">
+                @bun_chew
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Developer Credit Strip (Thin Full-Width Black Strip) -->
+  <div class="developer-credit-strip">
+    <p class="developer-credit-text">&copy; 2026 CAD CodeAndDesigns. All rights reserved.</p>
+  </div>
+
+  <!-- Menu Data and Application Logic -->
+  <script src="menu-data.js"></script>
+  <script src="menu.js"></script>
+</body>
+</html>
