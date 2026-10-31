@@ -799,8 +799,8 @@ img {
   }
 
   .hero-headline-img {
-    width: 82%;
-    max-width: 290px;
+    width: 65%;
+    max-width: 232px;
     margin: 0 auto;
   }
 
@@ -840,8 +840,8 @@ img {
   }
 
   .hero-headline-img {
-    width: 85%;
-    max-width: 250px;
+    width: 68%;
+    max-width: 200px;
   }
 
   .hero-actions {
