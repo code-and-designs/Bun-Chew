@@ -449,66 +449,34 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   Headline Styling ("Taste beyond Borders")
+   Headline Styling ("Taste beyond Borders" Brand Image)
    -------------------------------------------------------------------------- */
 .headline-wrapper {
   position: relative;
   margin-bottom: 18px;
-  transform: rotate(-3.5deg);
-  transform-origin: left bottom;
-}
-
-.headline-accents-top {
-  position: absolute;
-  top: -22px;
-  left: -22px;
-  pointer-events: none;
+  width: 100%;
 }
 
 .hero-headline {
-  font-family: var(--font-script);
-  font-weight: 700;
-  line-height: 0.9;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  letter-spacing: -0.01em;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  display: block;
+}
+
+.hero-headline-img {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  display: block;
   user-select: none;
+  -webkit-user-drag: none;
+  filter: drop-shadow(0 3px 10px rgba(166, 27, 34, 0.08));
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.word-taste {
-  font-size: 5rem;
-  color: var(--color-primary-navy);
-  transform: rotate(-3deg);
-  display: inline-block;
-  margin-bottom: 2px;
-  filter: drop-shadow(0 2px 4px rgba(24, 40, 72, 0.08));
-}
-
-.word-beyond {
-  font-size: 3.6rem;
-  color: var(--color-brand-red);
-  transform: rotate(-2deg);
-  display: inline-block;
-  margin-left: 12px;
-  margin-bottom: 2px;
-  filter: drop-shadow(0 2px 4px rgba(166, 27, 34, 0.1));
-}
-
-.word-borders {
-  font-size: 5rem;
-  color: var(--color-brand-red);
-  transform: rotate(-1deg);
-  display: inline-block;
-  margin-left: 20px;
-  filter: drop-shadow(0 2px 4px rgba(166, 27, 34, 0.12));
-}
-
-.headline-accents-bottom {
-  position: absolute;
-  bottom: 58px;
-  left: -12px;
-  pointer-events: none;
+.hero-headline-img:hover {
+  transform: scale(1.02);
 }
 
 /* --------------------------------------------------------------------------
@@ -625,14 +593,8 @@ img {
     top: 60px;
     left: 290px;
   }
-  .word-taste {
-    font-size: 4.4rem;
-  }
-  .word-beyond {
-    font-size: 3.2rem;
-  }
-  .word-borders {
-    font-size: 4.4rem;
+  .hero-headline-img {
+    max-width: 330px;
   }
 }
 
@@ -682,14 +644,8 @@ img {
     animation: none;
   }
 
-  .word-taste {
-    font-size: 3.8rem;
-  }
-  .word-beyond {
-    font-size: 2.8rem;
-  }
-  .word-borders {
-    font-size: 3.8rem;
+  .hero-headline-img {
+    max-width: 310px;
   }
 }
 
@@ -824,58 +780,28 @@ img {
     display: none !important;
   }
 
-  /* Headline on mobile: "Taste beyond" on line 1, "Borders" on line 2 */
+  /* Headline on mobile: Brand Image */
   .headline-wrapper {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     width: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
     position: relative;
   }
 
-  .headline-accents-top {
-    position: relative;
-    top: 0;
-    left: 0;
-    margin-bottom: -4px;
-    transform: rotate(0deg);
-  }
-
-  .headline-accents-bottom {
-    display: none !important;
-  }
-
   .hero-headline {
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: flex;
     justify-content: center;
-    align-items: baseline;
-    gap: 6px;
-    line-height: 1;
-    text-align: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
   }
 
-  .word-taste {
-    font-size: 2.6rem;
-    transform: rotate(-2deg);
-    margin-bottom: 0;
-  }
-
-  .word-beyond {
-    font-size: 2.3rem;
-    transform: rotate(0deg);
-    margin-left: 0;
-    margin-bottom: 0;
-  }
-
-  .word-borders {
-    font-size: 3.1rem;
-    transform: rotate(0deg);
-    margin-left: 0;
-    width: 100%; /* Breaks onto its own centered line */
-    text-align: center;
-    margin-top: -2px;
+  .hero-headline-img {
+    width: 82%;
+    max-width: 290px;
+    margin: 0 auto;
   }
 
   /* Description on Mobile */
@@ -913,14 +839,9 @@ img {
     height: 310px;
   }
 
-  .word-taste {
-    font-size: 2.3rem;
-  }
-  .word-beyond {
-    font-size: 2.0rem;
-  }
-  .word-borders {
-    font-size: 2.6rem;
+  .hero-headline-img {
+    width: 85%;
+    max-width: 250px;
   }
 
   .hero-actions {
