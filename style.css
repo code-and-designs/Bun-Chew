@@ -377,6 +377,7 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
+  z-index: 2;
 }
 
 .hero-mobile-visual {
@@ -683,15 +684,17 @@ img {
     margin-left: auto;
   }
 
-  /* Reset hero background on mobile so image is cleanly separated above */
+  /* Reset hero background on mobile so it seamlessly shares the continuous doodle pattern flow */
   .hero-section {
     flex-direction: column;
     min-height: auto;
     background-image: none !important;
-    background-color: var(--color-bg-cream);
-    padding: 0 0 32px 0;
+    background-color: transparent !important;
+    padding: 0 !important;
     width: 100%;
-    overflow: hidden;
+    overflow: visible;
+    position: relative;
+    z-index: 1;
   }
 
   /* Show mobile hero image on top with the curved bottom edge */
@@ -699,9 +702,10 @@ img {
     display: block;
     width: 100%;
     position: relative;
-    background-color: var(--color-bg-cream);
-    overflow: hidden;
-    margin-bottom: -1px;
+    background-color: transparent;
+    overflow: visible;
+    margin-bottom: -15px; /* Tucks the curved edge smoothly over the continuous doodle flow */
+    z-index: 2;
   }
 
   .mobile-image-wrapper {
@@ -709,7 +713,9 @@ img {
     width: 100%;
     height: 350px;
     overflow: hidden;
-    background-color: var(--color-bg-cream);
+    clip-path: url(#mobileHeroCurveClip);
+    -webkit-clip-path: url(#mobileHeroCurveClip);
+    background-color: transparent;
   }
 
   .mobile-hero-img {
@@ -720,49 +726,19 @@ img {
     display: block;
   }
 
-  /* Upward arched curve mask (seamless zero-gap connection) */
-  .mobile-curve-mask {
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 100%;
-    height: 32px;
-    pointer-events: none;
-    transform: translateY(1px);
-  }
-
-  .curve-svg {
-    width: 100%;
-    height: 100%;
-    display: block;
-  }
-
-  /* Hero Content container on mobile with seamless doodle pattern starting from curve */
+  /* Hero Content container on mobile sharing the one unified continuous doodle background */
   .hero-container {
-    padding: 16px 16px 36px 16px;
+    padding: 18px 16px 20px 16px;
     min-height: auto;
     justify-content: center;
     width: 100%;
-    overflow: hidden;
     position: relative;
-    background-color: var(--color-bg-cream);
+    background-color: transparent !important;
     z-index: 1;
   }
 
-  .hero-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('assets/doodle-pattern.webp');
-    background-size: 380px auto;
-    background-repeat: repeat;
-    background-position: top center;
-    opacity: 0.13;
-    pointer-events: none;
-    z-index: 0;
+  .menu-section {
+    padding: 20px 0 35px 0;
   }
 
   .hero-content {
@@ -873,9 +849,9 @@ img {
   right: 0;
   bottom: 0;
   background-image: url('assets/doodle-pattern.webp');
-  background-size: 380px auto;
+  background-size: 420px auto;
   background-repeat: repeat;
-  background-position: top center;
+  background-position: center top;
   opacity: 0.13;
   pointer-events: none;
   z-index: 0;
