@@ -372,7 +372,7 @@ img {
       rgba(250, 247, 242, 0.1) 32%, 
       rgba(250, 247, 242, 0) 50%
     ),
-    url('assets/hero-bg.png');
+    url('assets/hero-bg.webp');
   background-position: right 6% center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -623,7 +623,7 @@ img {
         rgba(250, 247, 242, 0.65) 45%, 
         rgba(250, 247, 242, 0.15) 75%
       ),
-      url('assets/hero-bg.png');
+      url('assets/hero-bg.webp');
     background-position: right 0% center;
   }
 
@@ -756,7 +756,7 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('assets/doodle-pattern.png');
+    background-image: url('assets/doodle-pattern.webp');
     background-size: 380px auto;
     background-repeat: repeat;
     background-position: top center;
@@ -872,7 +872,7 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('assets/doodle-pattern.png');
+  background-image: url('assets/doodle-pattern.webp');
   background-size: 380px auto;
   background-repeat: repeat;
   background-position: top center;
@@ -1507,7 +1507,7 @@ img {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('assets/doodle-pattern.png');
+  background-image: url('assets/doodle-pattern.webp');
   background-size: 320px auto;
   background-repeat: repeat;
   background-position: center;

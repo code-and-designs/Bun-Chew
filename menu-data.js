@@ -10,7 +10,7 @@ const MENU_DATA = [
     categoryName: 'Buns',
     name: 'Signature Korean Bun',
     price: 150,
-    image: 'assets/menu-garlic-bun.png',
+    image: 'assets/menu-garlic-bun.webp',
     description: 'A Cream Cheese Garlic Bun is a soft, fluffy bread bun filled with a rich cream cheese mixture and coated with a savory garlic butter sauce. Inspired by the popular Korean-style cream cheese garlic bread, it combines sweet, creamy, and garlicky flavors in one bun.',
     isFeatured: true
   },
@@ -20,7 +20,7 @@ const MENU_DATA = [
     categoryName: 'Buns',
     name: 'Bunchew Creamy Bun',
     price: 140,
-    image: 'assets/menu-crispy-bun.png',
+    image: 'assets/menu-crispy-bun.webp',
     description: 'A soft and fluffy milk bun filled with rich creamy butter and delicious cheese. Lightly sweet, buttery, and cheesy, with a melt-in-your-mouth texture that makes every bite irresistibly satisfying.',
     isFeatured: true
   },
@@ -118,7 +118,7 @@ const MENU_DATA = [
     categoryName: 'Buns',
     name: 'Pistachio Bun',
     price: 160,
-    image: 'assets/menu-pistachio-bun.png',
+    image: 'assets/menu-pistachio-bun.webp',
     isFeatured: true
   },
   {
@@ -145,7 +145,7 @@ const MENU_DATA = [
     categoryName: 'Hot Beverages',
     name: 'Creamy Coffee',
     price: 79,
-    image: 'assets/Bun Chew Cream Coffee Cup.png',
+    image: 'assets/menu-cream-coffee.webp',
     isFeatured: true
   },
   {
@@ -164,7 +164,7 @@ const MENU_DATA = [
     categoryName: 'Cold Beverages',
     name: 'Cold Coffee',
     price: 140,
-    image: 'assets/menu-iced-coffee.png',
+    image: 'assets/menu-iced-coffee.webp',
     isFeatured: true
   },
   {

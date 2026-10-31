@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // --------------------------------------------------------------------------
   function createMenuCardHtml(item, index = 0) {
     const hasCustomPhoto = Boolean(item.image);
-    const imgSrc = item.image || 'assets/Bun Chew Cup and Pastry Sticker.png';
+    const imgSrc = item.image || 'assets/cup-pastry-sticker.webp';
     const hasDescription = Boolean(item.description);
     const animDelay = ((index % 12) * 0.035).toFixed(3);
 
@@ -131,7 +131,8 @@ document.addEventListener('DOMContentLoaded', () => {
         alt="${item.name}" 
         class="all-card-img ${hasCustomPhoto ? '' : 'placeholder-sticker'}" 
         loading="lazy"
-        onerror="this.onerror=null; this.src='assets/Bun Chew Cup and Pastry Sticker.png'; this.classList.add('placeholder-sticker');"
+        decoding="async"
+        onerror="this.onerror=null; this.src='assets/cup-pastry-sticker.webp'; this.classList.add('placeholder-sticker');"
       >
     `;
 
@@ -292,7 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function openItemModal(item) {
     if (!menuItemModal) return;
     if (modalItemImg) {
-      modalItemImg.src = item.image || 'assets/Bun Chew Cup and Pastry Sticker.png';
+      modalItemImg.src = item.image || 'assets/cup-pastry-sticker.webp';
       modalItemImg.alt = item.name;
     }
     if (modalItemCategory) modalItemCategory.textContent = item.categoryName;

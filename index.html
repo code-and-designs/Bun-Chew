@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Bun Chew Café | Signature Korean Buns & Specialty Coffee</title>
   <meta name="description" content="Taste beyond borders at Bun Chew Café. Indulge in warm signature Korean garlic cheese buns, handcrafted beverages, and specialty coffee. Good coffee, better days.">
-  <link rel="icon" type="image/png" href="assets/bun-chew-logo-hd.png">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preload" as="image" href="assets/hero-bg.webp" type="image/webp">
+  <link rel="preload" as="image" href="assets/Taste%20Beyond%20Borders%20font.webp" type="image/webp">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -15,7 +17,7 @@
     <div class="header-container">
       <!-- Brand Logo (Left) -->
       <a href="#" class="brand-logo" aria-label="Bun Chew Home">
-        <img src="assets/bun-chew-logo-hd.png" alt="Bun Chew Café Logo" class="logo-img">
+        <img src="assets/bun-chew-logo-hd.webp" alt="Bun Chew Café Logo" class="logo-img" width="140" height="122">
       </a>
 
       <!-- Desktop Navigation Links (Centered) -->
@@ -40,7 +42,7 @@
     <!-- Mobile Navigation Drawer -->
     <div class="mobile-nav-drawer" id="mobileDrawer" aria-hidden="true">
       <div class="drawer-header">
-        <img src="assets/bun-chew-logo-hd.png" alt="Bun Chew Café Logo" class="drawer-logo">
+        <img src="assets/bun-chew-logo-hd.webp" alt="Bun Chew Café Logo" class="drawer-logo" width="130" height="114">
         <button class="close-drawer-btn" id="closeDrawerBtn" aria-label="Close menu">&times;</button>
       </div>
       <ul class="mobile-nav-list">
@@ -59,14 +61,14 @@
       <!-- Mobile Hero Visual: Top cropped photo with arched bottom mask (<= 768px) -->
       <div class="hero-mobile-visual" aria-hidden="true">
         <div class="mobile-image-wrapper">
-          <img src="assets/hero-bg.png" alt="Bun Chew guest enjoying signature garlic bun and coffee" class="mobile-hero-img">
+          <img src="assets/hero-bg.webp" alt="Bun Chew guest enjoying signature garlic bun and coffee" class="mobile-hero-img" fetchpriority="high">
           <!-- Upward arched curve mask with matching doodle pattern -->
           <div class="mobile-curve-mask">
             <svg viewBox="0 0 500 36" preserveAspectRatio="none" class="curve-svg" style="display: block;">
               <defs>
                 <pattern id="curveDoodlePattern" patternUnits="userSpaceOnUse" width="380" height="380">
                   <rect width="380" height="380" fill="#FAF7F2"/>
-                  <image href="assets/doodle-pattern.png" xlink:href="assets/doodle-pattern.png" width="380" height="380" opacity="0.13"/>
+                  <image href="assets/doodle-pattern.webp" xlink:href="assets/doodle-pattern.webp" width="380" height="380" opacity="0.13"/>
                 </pattern>
               </defs>
               <path d="M0,0 C160,34 340,34 500,0 L500,40 L0,40 Z" fill="url(#curveDoodlePattern)"></path>
@@ -100,7 +102,7 @@
           <!-- Main Headline with authentic brush typography image -->
           <div class="headline-wrapper">
             <h1 class="hero-headline">
-              <img src="assets/Taste Beyond Borders font.png" alt="Taste beyond Borders" class="hero-headline-img" width="1374" height="1145">
+              <img src="assets/Taste Beyond Borders font.webp" alt="Taste beyond Borders" class="hero-headline-img" width="1000" height="833" fetchpriority="high">
             </h1>
           </div>
 
@@ -158,7 +160,7 @@
           <!-- Card 1: Signature Korean Bun -->
           <article class="menu-card" data-category="buns">
             <div class="card-image-box">
-              <img src="assets/menu-garlic-bun.png" alt="Signature Glazed Korean Garlic Cheese Bun" class="card-img" loading="lazy">
+              <img src="assets/menu-garlic-bun.webp" alt="Signature Glazed Korean Garlic Cheese Bun" class="card-img" loading="lazy" decoding="async">
             </div>
             <div class="card-info">
               <h3 class="card-title">Signature<br>Korean Bun</h3>
@@ -174,7 +176,7 @@
           <!-- Card 2: Crispy Cream Bun -->
           <article class="menu-card" data-category="buns">
             <div class="card-image-box">
-              <img src="assets/menu-crispy-bun.png" alt="Crispy Bun Chew Cream Bun" class="card-img" loading="lazy">
+              <img src="assets/menu-crispy-bun.webp" alt="Crispy Bun Chew Cream Bun" class="card-img" loading="lazy" decoding="async">
             </div>
             <div class="card-info">
               <h3 class="card-title">Crispy<br>Cream Bun</h3>
@@ -190,7 +192,7 @@
           <!-- Card 3: Pistachio Cream Bun -->
           <article class="menu-card" data-category="buns">
             <div class="card-image-box">
-              <img src="assets/menu-pistachio-bun.png" alt="Pistachio Cream Bun in Branded Wrap" class="card-img" loading="lazy">
+              <img src="assets/menu-pistachio-bun.webp" alt="Pistachio Cream Bun in Branded Wrap" class="card-img" loading="lazy" decoding="async">
             </div>
             <div class="card-info">
               <h3 class="card-title">Pistachio<br>Cream Bun</h3>
@@ -206,7 +208,7 @@
           <!-- Card 4: Iced Coffee Delight -->
           <article class="menu-card" data-category="drinks">
             <div class="card-image-box card-image-drink">
-              <img src="assets/menu-iced-coffee.png" alt="Bun Chew Iced Coffee Delight" class="card-img" loading="lazy">
+              <img src="assets/menu-iced-coffee.webp" alt="Bun Chew Iced Coffee Delight" class="card-img" loading="lazy" decoding="async">
             </div>
             <div class="card-info">
               <h3 class="card-title">Iced Coffee<br>Delight</h3>
@@ -227,7 +229,7 @@
       <div class="story-container">
         <!-- Story Image Column (Left) -->
         <div class="story-image-wrap">
-          <img src="assets/Bun Chew Café at Golden Hour.png" alt="Bun Chew Café interior at golden hour" class="story-img" loading="lazy">
+          <img src="assets/story-cafe.webp" alt="Bun Chew Café interior at golden hour" class="story-img" loading="lazy" decoding="async">
         </div>
 
         <!-- Story Content Column (Right) -->
@@ -268,7 +270,7 @@
             <!-- Store Image (Clickable to open Google Maps) -->
             <a href="https://maps.app.goo.gl/UzxFyjBt8iA91zGC8" target="_blank" rel="noopener noreferrer" class="location-image-link" aria-label="Open Bun Chew Café Kochi location on Google Maps">
               <div class="location-image-box">
-                <img src="assets/Bun Chew’s Warm Pastry Counter.png" alt="Bun Chew Café pastry counter and storefront in Kochi" class="location-img" loading="lazy">
+                <img src="assets/location-counter.webp" alt="Bun Chew Café pastry counter and storefront in Kochi" class="location-img" loading="lazy" decoding="async">
                 <div class="location-image-overlay">
                   <span class="location-overlay-badge">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -318,7 +320,7 @@
         <div class="red-footer-banner-row">
           <!-- Bun Product Box: Intentionally Cropped Close-Up -->
           <div class="red-footer-bun-frame">
-            <img src="assets/menu-garlic-bun.png" alt="Freshly baked signature Bun Chew Korean garlic cheese bun close-up" class="red-footer-bun-img" loading="lazy">
+            <img src="assets/menu-garlic-bun.webp" alt="Freshly baked signature Bun Chew Korean garlic cheese bun close-up" class="red-footer-bun-img" loading="lazy" decoding="async">
           </div>
 
           <!-- Headline -->
@@ -341,7 +343,7 @@
           <!-- Logo Badge -->
           <div class="red-footer-logo-box">
             <div class="red-footer-logo-badge">
-              <img src="assets/bun-chew-logo-hd.png" alt="Bun Chew Café Logo" class="red-footer-logo-img">
+              <img src="assets/bun-chew-logo-hd.webp" alt="Bun Chew Café Logo" class="red-footer-logo-img" loading="lazy" decoding="async">
             </div>
           </div>
         </div>
