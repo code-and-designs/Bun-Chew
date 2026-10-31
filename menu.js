@@ -442,3 +442,38 @@ document.addEventListener('DOMContentLoaded', () => {
   // --------------------------------------------------------------------------
   renderMenu();
 });
+
+// --------------------------------------------------------------------------
+// Loading Splash Screen Controller (Graceful Dissolve)
+// --------------------------------------------------------------------------
+(function initSplashScreen() {
+  const splashScreen = document.getElementById('siteSplashScreen');
+  if (!splashScreen) return;
+
+  const startTime = Date.now();
+  const minDisplayTime = 650;
+  let isDismissed = false;
+
+  function dismissSplash() {
+    if (isDismissed) return;
+    isDismissed = true;
+
+    const elapsed = Date.now() - startTime;
+    const remainingDelay = Math.max(0, minDisplayTime - elapsed);
+
+    setTimeout(() => {
+      splashScreen.classList.add('fade-out');
+      setTimeout(() => {
+        splashScreen.style.display = 'none';
+      }, 550);
+    }, remainingDelay);
+  }
+
+  if (document.readyState === 'complete') {
+    dismissSplash();
+  } else {
+    window.addEventListener('load', dismissSplash);
+    setTimeout(dismissSplash, 2000);
+  }
+})();
+

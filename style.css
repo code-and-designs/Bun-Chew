@@ -2211,6 +2211,141 @@ img {
   transform: scale(1.08) rotate(4deg);
 }
 
+/* ==========================================================================
+   Interactive Loading Splash Screen
+   ========================================================================== */
+.site-splash-screen {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  background-color: var(--color-bg-cream, #FAF7F2);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.5s ease;
+}
+
+.site-splash-screen::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('assets/doodle-pattern.webp');
+  background-size: 320px auto;
+  background-repeat: repeat;
+  background-position: center;
+  opacity: 0.14;
+  pointer-events: none;
+}
+
+.splash-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 32px 28px;
+  max-width: 340px;
+  width: 90%;
+  animation: splashFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.splash-brand-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.splash-logo {
+  width: 138px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 6px 18px rgba(166, 27, 34, 0.12));
+  animation: splashLogoPulse 2.4s ease-in-out infinite alternate;
+}
+
+.splash-sticker-wrap {
+  margin-top: -8px;
+  animation: splashStickerBounce 2s ease-in-out infinite alternate;
+}
+
+.splash-sticker {
+  width: 125px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 8px 20px rgba(24, 40, 72, 0.08));
+}
+
+.splash-loader-bar {
+  width: 140px;
+  height: 4px;
+  background: rgba(166, 27, 34, 0.12);
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 14px;
+}
+
+.splash-loader-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 35%;
+  background: linear-gradient(90deg, var(--color-brand-red, #A61B22), var(--color-brand-yellow, #E5A93C));
+  border-radius: 999px;
+  animation: splashProgressSlide 1.25s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.splash-tagline {
+  font-family: var(--font-script, 'Caveat', cursive);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-brand-red, #A61B22);
+  margin: 0;
+  letter-spacing: 0.02em;
+  opacity: 0.95;
+}
+
+@keyframes splashFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes splashLogoPulse {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.035); }
+}
+
+@keyframes splashStickerBounce {
+  0% { transform: translateY(0) rotate(-2deg); }
+  100% { transform: translateY(-7px) rotate(2deg); }
+}
+
+@keyframes splashProgressSlide {
+  0% { left: -35%; width: 30%; }
+  50% { width: 55%; }
+  100% { left: 100%; width: 30%; }
+}
+
+.site-splash-screen.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 /* 9. Accessibility: Respect User's Reduced Motion Preferences */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -2226,5 +2361,6 @@ img {
     transform: none !important;
   }
 }
+
 
 
